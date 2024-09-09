@@ -10,6 +10,10 @@ Adam John Ritchiea, Aronrag Meeyai, Caroline Trotter, Alexander D Douglas
 ## Documentation
 
 [Documentation](https://linkto paper) 
+
+## model
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/85d75e2b-8fba-4b8e-bc6a-b57fa4d876e6">
+
 ## Required packages
 ggplot2/ data.table
 ## Using this model
@@ -39,8 +43,7 @@ Any additional information goes here
 ## Results
 To generate the results for this work, there are ...
 
-## model
-<img width="452" alt="image" src="https://github.com/user-attachments/assets/85d75e2b-8fba-4b8e-bc6a-b57fa4d876e6">
+
 
 
 
