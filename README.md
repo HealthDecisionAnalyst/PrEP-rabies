@@ -1,2 +1,40 @@
-# PrEP-rabies
-[README.md](https://github.com/user-attachments/files/16931954/README.md)
+# Project Title
+
+Rabies pre-exposure prophylaxis is an underused intervention that can be cost effective across a range of scenarios.
+
+
+## Authors
+
+Adam John Ritchiea, Aronrag Meeyai, Caroline Trotter, Alexander D Douglas
+
+## Documentation
+
+[Documentation](https://linkto paper) 
+## Required packages
+ggplot2/ data.table
+## Using this model
+step1) clone this repository to your computer and then run the "Results Generatiobn.R" file.
+## Data
+all data sources can be found in ...
+## Inputs
+there are ...
+## Outputs 
+there are ...
+## Model parameters and calculations
+there are spredsheets contain sources for the model parameters for the model
+## Figures
+The figures for this work including ...
+## Acknowledgements
+
+ - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
+ - [Awesome README](https://github.com/matiassingers/awesome-readme)
+ - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+
+
+## Appendix
+
+Any additional information goes here
+
+
+## Results
+To generate the results for this work, there are ...
