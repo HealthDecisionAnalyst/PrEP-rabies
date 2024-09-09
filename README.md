@@ -46,7 +46,7 @@ Main figures for this work including:
 
 
 ## Appendix
-Supplementary figures for this work including sensitive analysis for Main figures with: a 0% discount rate, 1.5% discount rate, and 3% discount rate
+Supplementary figures for this work including sensitive analysis for Main figures with: 0%, 1.5%, and 3% discount rates
 
 
 
