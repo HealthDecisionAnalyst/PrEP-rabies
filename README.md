@@ -17,7 +17,7 @@ Comparing the PEP-only to the PrEP plus PEP scenarios.
 
 
 ## Required packages
-ggplot2/ data.table
+ggplot2/ ggthemes/ dplyr/ plotly
 ## Using this model
 step1) clone this repository to your computer and then run the "Results Generatiobn.R" file.
 ## Data
