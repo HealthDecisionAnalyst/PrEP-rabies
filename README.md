@@ -38,3 +38,10 @@ Any additional information goes here
 
 ## Results
 To generate the results for this work, there are ...
+
+
+## Screenshots
+
+![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+
+
