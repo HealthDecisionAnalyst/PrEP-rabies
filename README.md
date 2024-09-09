@@ -39,9 +39,9 @@ Any additional information goes here
 ## Results
 To generate the results for this work, there are ...
 
+## model
+<img width="452" alt="image" src="https://github.com/user-attachments/assets/85d75e2b-8fba-4b8e-bc6a-b57fa4d876e6">
 
-## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
 
