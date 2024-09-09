@@ -23,8 +23,7 @@ step1) clone this repository to your computer and then run the "Results Generati
 ## Data
 all data sources can be found in ...
 ## Inputs
-Table 1. ![image](https://github.com/user-attachments/assets/762cc7e7-383b-4b53-b4e3-4cade536705b)
-there are ...
+Table 1, present input paramaters and its sources
 ## Outputs 
 there are ...
 ## Model parameters and calculations
