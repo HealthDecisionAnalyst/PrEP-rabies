@@ -29,7 +29,11 @@ there are ...
 ## Model parameters and calculations
 there are spredsheets contain sources for the model parameters for the model
 ## Figures
-The figures for this work including ...
+Main figures for this work including: 
+1) Tornado plot for Indremental Cost-Effectiveness Ratio (ICER)
+2) Individual plots of the impact of varying each key parameter in a one-way sensitivity analysis
+3) Contour plots of the ICER across a range of variables
+
 ## Acknowledgements
 
  - [Awesome Readme Templates](https://awesomeopensource.com/project/elangosundar/awesome-README-templates)
