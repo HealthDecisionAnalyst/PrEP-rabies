@@ -20,6 +20,22 @@ Comparing the PEP-only to the PrEP plus PEP scenarios.
 ggplot2/ ggthemes/ dplyr/ plotly
 ## Using this model
 step1) clone this repository to your computer and then run the "Results Generatiobn.R" file.
+
+The easiest way to reproduce the results of our paper is to clone this repository to your computer and then run the "Results Generation.R" file.
+
+A major aim of these models is that they be used to simulate One Health AMR interventions in agriculture in other real-life contexts. In order to do this, researchers and policymakers can alter the inputs to reflect the context of interest. Because it may be difficult to determine all of the necessary parameters for the context of interest, we recommend the following:
+
+1) choose the income category scenario that is most appropriate (low-income (LIC), middle income (MIC), or high income(HIC));
+2) in the input file for the general version of the model, 'inputs - general model.csv', edit the parameters in the column of the chosen income category where they are known, and leave the remaining parameters unchanged;
+3) go to the general version of the model and select the relevant income category by editing the line
+scenario_income <- "..... ;
+4) run the model and obtain results!
+
+the more accurately the user is able to parameterise the model to the context of the interest, the more accurate the results. An example of how to adapt the model to a country-specific context is included in the file "Example.R".
+
+
+
+
 ## Data
 all data sources can be found in ...
 ## Inputs
