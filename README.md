@@ -51,8 +51,8 @@ To generate the results for this work, there are ...
 ## Figures
 Main figures for this work including: 
 1) Tornado plot for Indremental Cost-Effectiveness Ratio (ICER)
-2) Individual plots of the impact of varying each key parameter in a one-way sensitivity analysis
-3) Contour plots of the ICER across a range of variables
+2) Individual plot of the impact of varying each key parameter in a one-way sensitivity analysis
+3) Contour plot of the ICER across a range of variables
 
 ## Acknowledgements
 
