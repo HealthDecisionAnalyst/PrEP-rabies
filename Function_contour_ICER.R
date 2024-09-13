@@ -188,7 +188,7 @@ contour_ICER <-function(parameters) {
   incr.costs.df <- PrEP.results.df$costs - noPrEP.results.df$costs 
   # Calculate ICER
   incremental.results.df <- incr.costs.df/QALYs.cases.avoided.df
-  retuen(incremental.results.df)
+  return(incremental.results.df)
   print(incremental.results.df)
 }
 
