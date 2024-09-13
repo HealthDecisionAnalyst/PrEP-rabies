@@ -28,13 +28,14 @@ R4C1 <-R1C1; R4C2 <-R1C1; R4C3 <-R1C1; R4C4 <-R1C1; R4C5 <-R1C1
 R5C1 <-R1C1; R5C2 <-R1C1; R5C3 <-R1C1; R5C4 <-R1C1; R5C5 <-R1C1
 
 
+##### Step 1: Source the function for generating contour plots
+source("Function_contour_ICER.R")
 
-##### step1 call function contour_ICER
-## step2 using set of parameters 
-
-### Define fixed parts of the parameters for R1C1,R1C2,R1C3,R1C4,R1C5
+##### Step 2: Define parameter sets for contour plotting
+### Fixed parameters for R1C1, R1C2, R1C3, R1C4, R1C5
 fixed_params <- c(0, 0.0001, 0.3, 0.19, 0.94, 1, 45, 0, 0)
-parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 45, 0, 0) ; R1C1[1,1] <-contour_ICER(parameters)
+# Parameters for R1C1
+parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 45, 0, 0) ;R1C1[1,1] <-contour_ICER(parameters)
 
 phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)
 theta_values <- c(0.0001, 0.001, 0.003, 0.01)
@@ -88,9 +89,10 @@ for (j in 1:length(theta_values)) {
   }
 }
 
-### Define fixed parts of the parameters for R2C1,R2C2,R2C3,R2C4,R2C5
+### Fixed parameters for R2C1,R2C2,R2C3,R2C4,R2C5
 fixed_params <- c(0, 0.0001, 0.3, 0.19, 0.94, 1, 15, 0, 0)
-parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 15, 0, 0) ; R1C1[1,1] <-contour_ICER(parameters)
+# Parameters for R2C1
+parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 15, 0, 0) ; R2C1[1,1] <-contour_ICER(parameters)
 
 phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)
 theta_values <- c(0.0001, 0.001, 0.003, 0.01)
@@ -144,9 +146,10 @@ for (j in 1:length(theta_values)) {
   }
 }
 
-### Define fixed parts of the parameters for R3C1,R3C2,R3C3,R3C4,R3C5
+### Fixed parameters for R3C1,R3C2,R3C3,R3C4,R3C5
 fixed_params <- c(0, 0.0001, 0.3, 0.19, 0.94, 1, 5, 0, 0)
-parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 5, 0, 0) ; R1C1[1,1] <-contour_ICER(parameters)
+# Parameters for R3C1
+parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 5, 0, 0) ; R3C1[1,1] <-contour_ICER(parameters)
 
 phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)
 theta_values <- c(0.0001, 0.001, 0.003, 0.01)
@@ -200,9 +203,10 @@ for (j in 1:length(theta_values)) {
   }
 }
 
-### Define fixed parts of the parameters for R4C1,R4C2,R4C3,R4C4,R4C5
+## Fixed parameters for R4C1,R4C2,R4C3,R4C4,R4C5
 fixed_params <- c(0, 0.0001, 0.3, 0.19, 0.94, 1, 2, 0, 0)
-parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 2, 0, 0) ; R1C1[1,1] <-contour_ICER(parameters)
+# Parameters for R4C1
+parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 2, 0, 0) ; R4C1[1,1] <-contour_ICER(parameters)
 
 phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)
 theta_values <- c(0.0001, 0.001, 0.003, 0.01)
@@ -256,9 +260,10 @@ for (j in 1:length(theta_values)) {
   }
 }
 
-### Define fixed parts of the parameters for R5C1,R5C2,R5C3,R5C4,R5C5
+## Fixed parameters for R5C1,R5C2,R5C3,R5C4,R5C5
 fixed_params <- c(0, 0.0001, 0.3, 0.19, 0.94, 1, 1, 0, 0)
-parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 1, 0, 0) ; R1C1[1,1] <-contour_ICER(parameters)
+# Parameters for R5C1
+parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 1, 0, 0) ; R5C1[1,1] <-contour_ICER(parameters)
 
 phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)
 theta_values <- c(0.0001, 0.001, 0.003, 0.01)
