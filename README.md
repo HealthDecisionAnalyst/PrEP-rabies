@@ -9,7 +9,7 @@ Adam John Ritchiea, Aronrag Meeyai, Caroline Trotter, Alexander D Douglas
 [Documentation](https://linkto paper) 
 
 ## Decision tree model
-Comparing the PEP-only to t'he PrEP plus PEP scenarios. 
+Comparing the PEP-only to the PrEP plus PEP scenarios. 
 <img width="452" alt="image" src="https://github.com/user-attachments/assets/85d75e2b-8fba-4b8e-bc6a-b57fa4d876e6">
 
 ## Required packages
