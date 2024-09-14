@@ -1,8 +1,9 @@
 
-################# Function to calculate ICERs and pathway details for Tornado plot #################
+################# Function to calculate ICERs and pathway details for cohort #################
+## using PROBABLISTIC PARAMETERS 
 ## This function calculates the Incremental Cost-Effectiveness Ratios (ICERs) for two interventions: 
 ## (1) No PrEP and (2) PrEP with abbreviated PEP, for preventing rabies. It computes expected costs, cases, 
-## and QALYs for each intervention by evaluating all decision tree pathways.
+## QALYs.cases.avoided, and cohort.incr.costs for each intervention (1000 simulations) by evaluating all decision tree pathways.
 
 cohort_ICER <-function(parameters) {
   
