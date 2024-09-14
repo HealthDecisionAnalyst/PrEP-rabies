@@ -1,24 +1,18 @@
-####**** This script sets up a series (25) of inner 5x5 matrices elements for outer matrix (R1C1, R1C2, ..., R5C5) size 5x5
-## each inner matrix representing different risk levels for rabies and PEP access (Post-Exposure Prophylaxis).
-## The "contour_ICER" function will be applied to each inner matrix, calculating the ICER (Incremental Cost-Effectiveness Ratio)
-## for every combination of rabies risk and PEP access
+#### This script creates a series of 5x5 inner matrices (R1C1, R1C2, ..., R5C5) representing combinations of rabies risk and PEP (Post-Exposure Prophylaxis) access probabilities. 
+## These matrices are embedded within an outer 5x5 matrix, each corresponding to different "cost of rabies PrEP per person" and "efficacy of PrEP in preventing rabies without PEP" combinations.
 
-## The inner matrices are structured as follows:
-## - Columns represent different rabies risk levels (e.g., 0.6, 1.6, 5.7, 11.4, 19.0)
-## - Rows represent different PEP access (e.g., 0.9, 0.7, 0.5, 0.3, 0.1)
-## The goal is to iterate over each matrix and its respective cell values, 
-## computing the ICER for all "rabies risk" and "PEP access" combinations.
+## The script generates and fills 25 inner 5x5 matrices, where:
+## Inner matrix structure:
+##  - Rows represent different levels of PEP access (0.9, 0.7, 0.5, 0.3, 0.1)
+##  - Columns represent rabies risk levels (0.6, 1.6, 5.7, 11.4, 19.0)
+## The "contour_ICER" function is applied to calculate the Incremental Cost-Effectiveness Ratio (ICER) for each matrix cell, representing all combinations of rabies risk and PEP access
+## Outer matrix structure:
+## - Rows: "Cost of rabies PrEP per person" (2, 3, 5, 15, 45)
+## - Columns: "Efficacy of PrEP in preventing rabies without PEP" (0, 0.3, 0.6, 0.8, 0.95)
+## - Each outer matrix corresponds to a set of ICER calculations for the respective rabies risk and PEP access levels
 
-## The outer matrix representing different "cost of rabies PrEP per person" and "efficacy of PrEP in preventing rabies in the absence of PEP"
-## The outer matrices are structured as follows:
-## - Columns represent "efficacy of PrEP in preventing rabies in the absence of PEP" (e.g., 0, 0.3, 0.6, 0.8, 0.95)
-## - Rows represent "cost of rabies PrEP per person" (e.g., 2, 3, 5, 15, 45)
-## The goal is to iterate over each matrix and its respective cell values, 
-
-
-
-# created initial inner matrices size 5x5 for [Rabies risk X PEP access]
-# [R1xC1]
+# Initial setup of 5x5 inner matrices for each [Rabies risk X PEP access] combination
+# Creating a base matrix (R1C1) and replicating it for other matrices
 R1C1 <-matrix(0, nrow = 5, ncol=5, byrow=TRUE)  
 # All initial inner matrices created as a copy of [R1xC1]
 R1C2 <-R1C1; R1C3 <-R1C1; R1C4 <-R1C1; R1C5 <-R1C1
@@ -28,28 +22,30 @@ R4C1 <-R1C1; R4C2 <-R1C1; R4C3 <-R1C1; R4C4 <-R1C1; R4C5 <-R1C1
 R5C1 <-R1C1; R5C2 <-R1C1; R5C3 <-R1C1; R5C4 <-R1C1; R5C5 <-R1C1
 
 
-##### Step 1: Source the function for generating contour plots
+##### Source the function for generating contour plotting
 source("Function_contour_ICER.R")
 
-##### Step 2: Define parameter sets for contour plotting
-### Fixed parameters for R1C1, R1C2, R1C3, R1C4, R1C5
+##### Set up parameters for contour plotting
+### Define fixed parameters for outer matrices (R1C1 to R5C5)
 fixed_params <- c(0, 0.0001, 0.3, 0.19, 0.94, 1, 45, 0, 0)
-# Parameters for R1C1
+
+### Parameters for the R1C1 inner matrix
 parameters <- c(0, 0.0001, 0.3, 0.19, 0.9, 0.94, 1, 45, 0, 0) ;R1C1[1,1] <-contour_ICER(parameters)
+# PEP access probabilities and rabies risk values for matrix loops
+phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)         # Rows: PEP access
+theta_values <- c(0.0001, 0.001, 0.003, 0.01)    # Columns: Rabies risk levels
 
-phi_values <- c(0.9, 0.7, 0.5, 0.3, 0.1)
-theta_values <- c(0.0001, 0.001, 0.003, 0.01)
-
-# R1C1 loop
+# Loop to fill the R1C1 matrix with ICER values
 for (j in 1:length(theta_values)) {
   for (i in 1:length(phi_values)) {
     parameters <- c(fixed_params[1:4], phi_values[i], fixed_params[5:9])
-    parameters[2] <- theta_values[j]
+    parameters[2] <- theta_values[j]             # Update rabies risk (theta)
     R1C1[i, j] <- contour_ICER(parameters)
   }
 }
 
-# R1C2 loop (changing first parameter to 0.3)
+# Repeat the process for other inner matrices by updating specific parameters
+# Example: R1C2 loop (changing first parameter to 0.3)
 fixed_params[1] <- 0.3
 for (j in 1:length(theta_values)) {
   for (i in 1:length(phi_values)) {
@@ -317,13 +313,12 @@ for (j in 1:length(theta_values)) {
   }
 }
 
-########
-# Define common column names (risk of Rabies), row names (prob start PEP), and ICER names for INNER MATRICES
+### Define column names (risk of Rabies), row names (prob start PEP), and ICER names for INNER MATRICES
 col_names <- c("0.6", "1.6", "5.7", "11.4", "19.0")
 row_names <- c("0.9", "0.7", "0.5", "0.3", "0.1")
 icer_names <- rep("ICER", 25)
 
-# List of 25 matrices, each representing a different combination of rabies risk and PEP access,
+# List of 25 matrices representing each combination of rabies risk and PEP access,
 # where column names are rabies risk levels and row names are PEP access
 matrix_list <- list(R1C1, R1C2, R1C3, R1C4, R1C5, 
                     R2C1, R2C2, R2C3, R2C4, R2C5,
@@ -331,7 +326,7 @@ matrix_list <- list(R1C1, R1C2, R1C3, R1C4, R1C5,
                     R4C1, R4C2, R4C3, R4C4, R4C5,
                     R5C1, R5C2, R5C3, R5C4, R5C5)
 
-# Apply the same column names (rabies risk), row names (PEP access), and ICER labels to each matrix in the list using a loop
+# Apply row/column names and ICER labels to each matrix
 for (i in 1:length(matrix_list)) {
   colnames(matrix_list[[i]]) <- col_names
   rownames(matrix_list[[i]]) <- row_names
