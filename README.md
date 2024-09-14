@@ -19,6 +19,7 @@ ggplot2/ ggthemes/ dplyr/ plotly
 step1) clone this repository to your computer and then run three functions in folder Function: "Function_Tornado_ICER.R", "Function_contour_ICER.R", and "Function_sensitivity_analysis.R" files
 
 step2) run scripts in folder calculate_ICER to obtaion the outputs
+
 step3) run scripts in fokder Plot to obtain the plots: 
        1) Tornado plot for Indremental Cost-Effectiveness Ratio (ICER)
        2) Individual plot of the impact of varying each key parameter in a one-way sensitivity analysis
