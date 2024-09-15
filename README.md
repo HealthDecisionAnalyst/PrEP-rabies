@@ -39,6 +39,7 @@ Main figures for this work include:
 
 ## Acknowledgements
 Adam John Ritchiea, Aronrag Meeyai, Caroline Trotter, Alexander D Douglas
+
 Jenner Institute, Old Road Campus Research Building, University of Oxford
 Centre for Tropical Medicine & Global Health, Nuffield Department of Medicine, University of Oxford
 Department of Veterinary Medicine, University of Cambridge
