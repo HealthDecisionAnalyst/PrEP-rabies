@@ -38,7 +38,10 @@ Main figures for this work include:
 3) Contour plot of the ICER across a range of variables
 
 ## Acknowledgements
-
+Adam John Ritchiea, Aronrag Meeyai, Caroline Trotter, Alexander D Douglas
+Jenner Institute, Old Road Campus Research Building, University of Oxford
+Centre for Tropical Medicine & Global Health, Nuffield Department of Medicine, University of Oxford
+Department of Veterinary Medicine, University of Cambridge
 
 ## Appendix
 Supplementary figures for this work including sensitive analysis for Main figures with: 0%, 1.5%, and 3% discount rates
