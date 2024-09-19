@@ -51,7 +51,7 @@ cohort_incremental_for_p.noPrEP.alive <-sensitivity_ICER()
 # Testing a flat distribution for "cost.PrEP" between 2 and 45
 cost.PrEP <- runif(n = n_samples, min = 2, max= 45)                             
 # Define fixed parameter values for other model inputs
-p.PrEP.preventRabies  <- 0.6; p.dog.bite <- 0.001; p.infected <- 0.19; p.rabidDog <- 0.3; p.startPEP <- 0.5; p.PrEP.alive <- 1; noPrEP.alive <-0.94; cost.PEP1 <- 0; cost.PEP2or3 <- 0
+p.PrEP.preventRabies  <- 0.6; p.dog.bite <- 0.001; p.infected <- 0.19; p.rabidDog <- 0.3; p.startPEP <- 0.5; p.PrEP.alive <- 1; p.noPrEP.alive <-0.94; cost.PEP1 <- 0; cost.PEP2or3 <- 0
 # Run sensitivity analysis for varying "cost.PrEP"
 cohort_incremental_for_cost.PrEP <-sensitivity_ICER()
 
